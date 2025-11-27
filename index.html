@@ -16,15 +16,15 @@
   <meta property="og:url" content="https://marveliptv.org/code/">
   <meta property="og:site_name" content="marvel iptv - سيرفر مارفل - تجديد سيرفر مارفل">
 
-  <!-- og:image = صورة الهيرو الجديدة (الصورة رقم 2) -->
-  <meta property="og:image" content="https://marveliptv.org/wp-content/uploads/2025/11/marvel-hero-vr.webp">
-  <meta property="og:image:secure_url" content="https://marveliptv.org/wp-content/uploads/2025/11/marvel-hero-vr.webp">
-  <meta property="og:image:alt" content="مارفل - نافذة على العالم - Marvel IPTV">
+  <!-- رجوع لصورة محمد صلاح الأصلية -->
+  <meta property="og:image" content="https://marveliptv.org/wp-content/uploads/2025/05/مارفل_محمد_صلاح-1024x1024.webp">
+  <meta property="og:image:secure_url" content="https://marveliptv.org/wp-content/uploads/2025/05/مارفل_محمد_صلاح-1024x1024.webp">
+  <meta property="og:image:alt" content="تجديد كود سيرفر مارفل marvel iptv">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="تجديد كود سيرفر مارفل marvel iptv - marvel iptv - سيرفر مارفل - تجديد سيرفر مارفل">
   <meta name="twitter:description" content="جدد اشتراك سيرفر مارفل MARVEL IPTV لمدة 12 شهر واستمتع بأكبر مكتبة رياضية وترفيهية.">
-  <meta name="twitter:image" content="https://marveliptv.org/wp-content/uploads/2025/11/marvel-hero-vr.webp">
+  <meta name="twitter:image" content="https://marveliptv.org/wp-content/uploads/2025/05/مارفل_محمد_صلاح-1024x1024.webp">
 
   <!-- خط Cairo -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -79,9 +79,10 @@
       margin-bottom: 8px;
     }
 
+    /* رجوع لشعار مارفل القديم */
     .logo img {
-      width: 110px;
-      height: 110px;
+      width: 90px;
+      height: 90px;
       border-radius: 24px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.7);
       background: #000;
@@ -117,9 +118,7 @@
       align-items: center;
     }
 
-    .hero-text-col {
-      min-width: 0;
-    }
+    .hero-text-col { min-width: 0; }
 
     .hero-heading {
       font-size: 24px;
@@ -214,13 +213,9 @@
       box-shadow: 0 14px 40px rgba(0,0,0,0.8);
     }
 
-    main {
-      margin-top: 26px;
-    }
+    main { margin-top: 26px; }
 
-    section {
-      margin-bottom: 28px;
-    }
+    section { margin-bottom: 28px; }
 
     .section-card {
       background: rgba(7, 10, 30, 0.96);
@@ -253,11 +248,54 @@
       box-shadow: 0 14px 40px rgba(0,0,0,0.75);
     }
 
-    /* صورة الأسعار (الصورة رقم 3) */
-    .pricing-card img {
-      width: 100%;
-      height: auto;
-      display: block;
+    /* شبكة الباقات (عمودين) */
+    .pricing-grid { text-align: center; }
+
+    .pricing-columns {
+      margin-top: 16px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .pricing-box {
+      background: rgba(5,8,24,0.98);
+      border-radius: 16px;
+      padding: 14px 12px 16px;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .pricing-box h3 {
+      font-size: 16px;
+      margin: 0 0 8px;
+      font-weight: 700;
+    }
+
+    .price {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .price span {
+      font-size: 12px;
+      color: var(--muted);
+      margin-right: 4px;
+    }
+
+    .pricing-box ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 12px;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.8;
+      text-align: right;
+    }
+
+    .pricing-box ul li::before {
+      content: "• ";
+      color: var(--primary);
     }
 
     footer {
@@ -321,6 +359,12 @@
       }
     }
 
+    @media (max-width: 700px) {
+      .pricing-columns {
+        grid-template-columns: minmax(0,1fr);
+      }
+    }
+
     @media (max-width: 600px) {
       .hero-heading { font-size: 21px; }
       .hero-subheading { font-size: 15px; }
@@ -338,10 +382,10 @@
     <!-- HEADER -->
     <header>
       <div class="logo">
-        <!-- الصورة رقم 1 كشعار -->
+        <!-- شعار مارفل القديم -->
         <a href="https://marveliptv.org/">
-          <img src="https://marveliptv.org/wp-content/uploads/2025/11/marvel-logo-main.webp"
-               alt="شعار مارفل MARVEL IPTV">
+          <img src="https://marveliptv.org/wp-content/uploads/2025/05/marvel.webp"
+               alt="marvel iptv">
         </a>
       </div>
       <div class="site-title">سيرفر مارفل - MARVEL IPTV</div>
@@ -360,7 +404,6 @@
           حتى نخبرك إذا كان يمكن تحويله بسوفت يحتوي على أيقونة مارفل.
         </p>
 
-        <!-- سطر شرح الدفع قبل PayPal -->
         <p class="note-paypal">
           يمكنك الدفع أونلاين مباشرة عبر PayPal بقيمة
           <strong>50 دولار للاشتراك السنوي الدولي</strong>،
@@ -374,7 +417,6 @@
             اشترك الآن / جدد اشتراكك داخل مصر
           </a>
 
-          <!-- زر PayPal الدولي 50$ -->
           <a class="btn-paypal"
              href="https://www.paypal.com/ncp/payment/JSSXH6M8WSEJG"
              target="_blank" rel="noopener">
@@ -395,10 +437,10 @@
         </p>
       </div>
 
-      <!-- صورة الهيرو الجديدة (الصورة رقم 2) -->
+      <!-- صورة محمد صلاح الأصلية في الهيرو -->
       <div class="hero-image">
-        <img src="https://marveliptv.org/wp-content/uploads/2025/11/marvel-hero-vr.webp"
-             alt="مارفل نافذة على العالم - إعلان VR">
+        <img src="https://marveliptv.org/wp-content/uploads/2025/05/مارفل_محمد_صلاح-1024x1024.webp"
+             alt="marvel iptv - محمد صلاح">
       </div>
     </div>
 
@@ -414,34 +456,64 @@
             عربية، تركية، أجنبية، آسيوية وأوروبية، مع قنوات بجودة تصل حتى
             <strong>4K</strong>.
           </p>
-
-          <div class="btn-row" style="justify-content:center; margin-top:14px;">
-            <a class="btn-main"
-               href="https://wa.me/201098256570?text=%D8%A7%D8%B1%D9%8A%D8%AF%20%D8%AA%D8%AC%D8%AF%D9%8A%D8%AF%20%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%20%D8%B3%D9%8A%D8%B1%D9%81%D8%B1%20%D9%85%D8%A7%D8%B1%D9%81%D9%84%20MARVEL%20IPTV"
-               target="_blank" rel="noopener">
-              اضغط هنا لتجديد الاشتراك
-            </a>
-          </div>
         </div>
       </section>
 
-      <!-- صورة إعلان مارفل (الصورة رقم 2 ككارت مستقل لو حابب تكررها) -->
+      <!-- صورة إعلان مارفل (محمد صلاح) -->
       <section>
         <div class="big-image-card">
-          <img src="https://marveliptv.org/wp-content/uploads/2025/11/marvel-hero-vr.webp"
-               alt="MARVEL IPTV - نافذة على العالم">
+          <img src="https://marveliptv.org/wp-content/uploads/2025/05/مارفل_محمد_صلاح-1024x1024.webp"
+               alt="MARVEL IPTV - صورة مارفل مع محمد صلاح">
         </div>
       </section>
 
-      <!-- صورة اشتراك سيرفر مارفل / قائمة الأسعار (الصورة رقم 3) -->
+      <!-- باقات سيرفر مارفل: عمودين -->
       <section>
-        <div class="section-card pricing-card center">
-          <h2 class="section-title">باقات وأسعار سيرفر مارفل داخل مصر</h2>
-          <p class="section-text" style="margin-bottom:12px;">
-            اختر الباقة المناسبة لك واستمتع بكل القنوات والمحتوى المميز طوال مدة الاشتراك.
+        <div class="section-card pricing-grid">
+          <h2 class="section-title center">باقات سيرفر مارفل</h2>
+          <p class="section-text center">
+            اختر الباقة المناسبة لك، سواء داخل مصر أو اشتراك دولي، واستمتع بكل القنوات والمحتوى المميز طوال مدة الاشتراك.
           </p>
-          <img src="https://marveliptv.org/wp-content/uploads/2025/11/marvel-pricing-egypt.webp"
-               alt="قائمة أسعار اشتراك سيرفر مارفل داخل مصر">
+
+          <div class="pricing-columns">
+            <!-- الباقة الذهبية داخل مصر -->
+            <div class="pricing-box">
+              <h3>الباقة الذهبية - داخل مصر</h3>
+              <div class="price">
+                400<span>جنيه / سنة</span>
+              </div>
+              <ul>
+                <li>اشتراك سنوي كامل داخل مصر.</li>
+                <li>آلاف القنوات العربية والعالمية بجودات مختلفة حتى 4K.</li>
+                <li>مكتبة أفلام ومسلسلات عربية، تركية، أجنبية، أطفال وغيرهم.</li>
+                <li>دعم فني عبر الواتساب طوال مدة الاشتراك.</li>
+              </ul>
+              <a class="btn-main"
+                 href="https://wa.me/201098256570?text=%D8%A7%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D8%B0%D9%87%D8%A8%D9%8A%D8%A9%20%D8%AF%D8%A7%D8%AE%D9%84%20%D9%85%D8%B5%D8%B1"
+                 target="_blank" rel="noopener">
+                اشترك الآن داخل مصر
+              </a>
+            </div>
+
+            <!-- الباقة الدولية -->
+            <div class="pricing-box">
+              <h3>الباقة الدولية</h3>
+              <div class="price">
+                50<span>$ / سنة</span>
+              </div>
+              <ul>
+                <li>اشتراك سنوي دولي يصلح لمعظم الدول.</li>
+                <li>دفع آمن عبر PayPal باستخدام بطاقة فيزا أو ماستر كارد.</li>
+                <li>نفس محتوى سيرفر مارفل المميز بجميع القنوات والمكتبات.</li>
+                <li>متابعة التفعيل عبر الواتساب بعد الدفع مباشرة.</li>
+              </ul>
+              <a class="btn-paypal"
+                 href="https://www.paypal.com/ncp/payment/JSSXH6M8WSEJG"
+                 target="_blank" rel="noopener">
+                دفع دولي عبر PayPal (50$/سنة)
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -477,7 +549,7 @@
     </footer>
   </div>
 
-  <!-- زر واتساب عائم -->
+  <!-- زر واتساب عائم (ابعتلنا الآن على واتساب) -->
   <a class="whatsapp-float"
      href="https://wa.me/201098256570?text=%D8%A7%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83%20%D8%A3%D9%88%20%D8%AA%D8%AC%D8%AF%D9%8A%D8%AF%20%D9%83%D9%88%D8%AF%20%D8%B3%D9%8A%D8%B1%D9%81%D8%B1%20%D9%85%D8%A7%D8%B1%D9%81%D9%84%20MARVEL%20IPTV"
      target="_blank" rel="noopener">
