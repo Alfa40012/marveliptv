@@ -32,14 +32,15 @@
 
   <style>
     :root {
-      --primary: #e41e26;  /* أحمر مارفل */
-      --primary-dark: #b31319;
-      --bg: #050814;
-      --text: #ffffff;
-      --muted: #b9bed1;
-      --card-bg: #0b1020;
+      /* ألوان نيوون مميزة لمارفل */
+      --primary: #ff00b8;        /* موف نيوون */
+      --primary-alt: #00e5ff;    /* تركواز نيوون */
+      --bg: #040014;
+      --text: #f9fbff;
+      --muted: #a9b2d8;
+      --card-bg: rgba(8, 10, 35, 0.92);
       --radius-lg: 20px;
-      --shadow-strong: 0 18px 50px rgba(0,0,0,0.75);
+      --shadow-strong: 0 22px 60px rgba(0,0,0,0.85);
     }
 
     * {
@@ -50,7 +51,10 @@
       margin: 0;
       font-family: "Cairo", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       direction: rtl;
-      background: radial-gradient(circle at top, #181d3a 0, #050814 40%, #000 100%);
+      background:
+        radial-gradient(circle at 0% 0%, #3b1b92 0, transparent 55%),
+        radial-gradient(circle at 100% 0%, #00e5ff22 0, transparent 60%),
+        radial-gradient(circle at 50% 100%, #ff00b810 0, #040014 55%, #000 100%);
       color: var(--text);
       min-height: 100vh;
     }
@@ -84,8 +88,9 @@
       width: 90px;
       height: 90px;
       border-radius: 24px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.7);
-      background: #000;
+      box-shadow: 0 14px 40px rgba(0,0,0,0.8);
+      background: radial-gradient(circle at 30% 0, #ffffff22 0, #000 55%);
+      border: 1px solid #ffffff22;
     }
 
     .site-title {
@@ -94,11 +99,15 @@
       letter-spacing: 0.05em;
       text-transform: uppercase;
       margin: 4px 0;
+      background: linear-gradient(135deg, #ffffff, var(--primary-alt));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
 
     .site-subtitle {
       font-size: 13px;
-      color: var(--muted);
+      color: var(--primary-alt);
       margin: 0;
     }
 
@@ -107,11 +116,12 @@
       padding: 18px 18px 22px;
       border-radius: var(--radius-lg);
       background:
-        radial-gradient(circle at 0 0, rgba(255,255,255,0.05) 0, transparent 50%),
-        radial-gradient(circle at 100% 0, rgba(228,30,38,0.25) 0, transparent 55%),
-        var(--card-bg);
+        radial-gradient(circle at 0 0, rgba(255,255,255,0.05) 0, transparent 55%),
+        radial-gradient(circle at 100% 0, rgba(0,229,255,0.20) 0, transparent 55%),
+        linear-gradient(135deg, rgba(9,12,40,0.96), rgba(8,6,30,0.98));
       box-shadow: var(--shadow-strong);
-      border: 1px solid rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.10);
+      backdrop-filter: blur(12px);
     }
 
     .hero-heading {
@@ -121,13 +131,17 @@
     }
 
     .hero-heading span {
-      color: var(--primary);
+      background: linear-gradient(135deg, var(--primary), var(--primary-alt));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
 
     .hero-subheading {
       font-size: 16px;
       margin: 0 0 6px;
       font-weight: 600;
+      color: #e0e4ff;
     }
 
     .hero-text {
@@ -150,15 +164,16 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      padding: 10px 18px;
+      padding: 10px 20px;
       border-radius: 999px;
       border: none;
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-      color: #fff;
+      background: linear-gradient(135deg, var(--primary), var(--primary-alt));
+      color: #050010;
       font-size: 14px;
-      font-weight: 700;
+      font-weight: 800;
       cursor: pointer;
-      box-shadow: 0 14px 35px rgba(228, 30, 38, 0.7);
+      box-shadow: 0 18px 40px rgba(0,229,255,0.35);
+      text-shadow: 0 1px 0 rgba(255,255,255,0.45);
     }
 
     .btn-secondary {
@@ -166,10 +181,10 @@
       align-items: center;
       justify-content: center;
       gap: 6px;
-      padding: 9px 14px;
+      padding: 9px 16px;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.16);
-      background: rgba(5,8,24,0.95);
+      border: 1px solid rgba(0,229,255,0.45);
+      background: radial-gradient(circle at 0 0, #00e5ff19 0, transparent 55%), rgba(5, 4, 30, 0.96);
       color: var(--muted);
       font-size: 13px;
       font-weight: 600;
@@ -185,17 +200,22 @@
     }
 
     .section-card {
-      background: rgba(7, 10, 30, 0.96);
+      background: var(--card-bg);
       border-radius: var(--radius-lg);
       padding: 18px 16px 20px;
-      border: 1px solid rgba(255,255,255,0.06);
-      box-shadow: 0 14px 40px rgba(0,0,0,0.7);
+      border: 1px solid rgba(255,255,255,0.09);
+      box-shadow: 0 18px 45px rgba(0,0,0,0.8);
+      backdrop-filter: blur(10px);
     }
 
     .section-title {
       font-size: 18px;
       margin: 0 0 10px;
       font-weight: 800;
+      background: linear-gradient(135deg, #ffffff, var(--primary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
 
     .section-text {
@@ -213,8 +233,9 @@
       margin-top: 10px;
       border-radius: var(--radius-lg);
       overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.08);
-      box-shadow: 0 14px 40px rgba(0,0,0,0.75);
+      border: 1px solid rgba(0,229,255,0.30);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.9);
+      background: radial-gradient(circle at 50% 0, #00e5ff11 0, transparent 55%);
     }
 
     .buttons-row-footer {
@@ -230,8 +251,8 @@
       border-radius: 999px;
       border: 1px solid rgba(255,255,255,0.26);
       font-size: 13px;
-      background: rgba(3,5,18,0.96);
-      color: #fff;
+      background: rgba(3,5,28,0.96);
+      color: #f4f6ff;
     }
 
     footer {
@@ -241,7 +262,9 @@
       font-size: 12px;
       color: var(--muted);
       border-top: 1px solid rgba(255,255,255,0.08);
-      background: radial-gradient(circle at top, rgba(228,30,38,0.25), transparent 55%);
+      background:
+        radial-gradient(circle at 50% 0, rgba(255,0,184,0.18) 0, transparent 55%),
+        radial-gradient(circle at 0 100%, rgba(0,229,255,0.15) 0, transparent 55%);
     }
 
     /* واتساب عائم */
@@ -377,11 +400,9 @@
       </section>
     </main>
 
-    <!-- FOOTER LINKS (أهم الصفحات) -->
+    <!-- FOOTER -->
     <footer>
       <div>عملاق المحتوى العربي - أقل استهلاك للإنترنت</div>
-         </div>
-
       <div style="margin-top:10px;">
         جميع الحقوق محفوظة سيرفر مارفل MARVEL IPTV
       </div>
